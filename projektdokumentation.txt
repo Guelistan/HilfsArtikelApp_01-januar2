@@ -1,0 +1,108 @@
+# Projektdokumentation
+
+## 1. Projektübersicht
+
+### 1.1 Projektname
+HilfsArtikelApp_01
+
+### 1.2 Ziel
+Das Ziel dieser Anwendung ist es, eine Bestell-App für pflegebedürftige Personen und Pflegedienstanbieter zu erstellen, die leicht bedienbar ist. Kunden sollen ihre Bedürfnisse einfach und effizient bestellen können.
+
+### 1.3 Motivation
+Dieses Projekt ist von persönlichem Interesse, da ich als Informatikerin im Pflegebereich tätig bin und die Bedürfnisse der pflegebedürftigen Personen und Pflegedienstanbieter gut kenne.
+
+## 2. Technologie-Stack
+
+### 2.1 Programmiersprache
+- C# Version 7.3
+
+### 2.2 Framework
+- .NET Framework 4.7.2
+
+### 2.3 Datenbank
+- SQL
+
+## 3. Projektstruktur
+
+### 3.1 WPF-Projekt
+- **Datei:** `Registrierung.xaml`
+  - Enthält die Benutzeroberfläche für die Registrierung.
+- **Datei:** `Registrierung.xaml.cs`
+  - Enthält die Logik für die Registrierung.
+
+### 3.2 SQL-Skript
+- **Datei:** `SQLQuery1.sql`
+  - Enthält das SQL-Skript zur Änderung der Tabelle `kunden`.
+
+## 4. Wichtige Klassen und Methoden
+
+### 4.1 Klasse: `Registrierung`
+- **Namespace:** `HilfsArtikelApp_01`
+- **Vererbt von:** `System.Windows.Window`
+- **Implementiert:** `System.Windows.Markup.IComponentConnector`
+
+#### 4.1.1 Methoden
+- `InitializeComponent()`
+  - Initialisiert die Komponenten der WPF-Anwendung.
+- `BestaetigenButton_Click(object sender, RoutedEventArgs e)`
+  - Event-Handler für den Bestätigungsbutton.
+- `ValidateInputs()`
+  - Validiert die Eingabefelder.
+- `IsValidEmail(string email)`
+  - Überprüft, ob die E-Mail-Adresse gültig ist.
+- `PasswortTextBox_PasswordChanged(object sender, RoutedEventArgs e)`
+  - Event-Handler für die Passwortänderung.
+- `CalculatePasswordStrength(string password)`
+  - Berechnet die Stärke des Passworts.
+- `SendeBestaetigungsEmail(string email, string passwort)`
+  - Sendet eine Bestätigungs-E-Mail.
+
+### 4.2 SQL-Skript
+- **Datei:** `SQLQuery1.sql`
+  - **Befehl:** `ALTER TABLE kunden`
+    - Fügt neue Spalten zur Tabelle `kunden` hinzu:
+      - `adresse VARCHAR(100)`
+      - `strasse VARCHAR(50)`
+      - `plz VARCHAR(10)`
+      - `telefonnummer VARCHAR(15)`
+      - `bezahloption VARCHAR(50)`
+
+## 5. Benutzeroberfläche
+
+### 5.1 Eingabefelder
+- `NameTextBox`
+- `VornameTextBox`
+- `EmailTextBox`
+- `PasswortTextBox`
+- `AdresseTextBox`
+- `StrasseTextBox`
+- `PLZTextBox`
+- `TelefonnummerTextBox`
+- `BezahloptionComboBox`
+
+### 5.2 Platzhalter
+- `NamePlaceholder`
+- `VornamePlaceholder`
+- `EmailPlaceholder`
+- `PasswortPlaceholder`
+- `AdressePlaceholder`
+- `StrassePlaceholder`
+- `PLZPlaceholder`
+- `TelefonnummerPlaceholder`
+
+### 5.3 Buttons
+- `BestaetigenButton`
+
+## 6. Datenbankänderungen
+
+### 6.1 Tabelle: `kunden`
+- **Neue Spalten:**
+  - `adresse VARCHAR(100)`
+  - `strasse VARCHAR(50)`
+  - `plz VARCHAR(10)`
+  - `telefonnummer VARCHAR(15)`
+  - `bezahloption VARCHAR(50)`
+
+## 7. Zusammenfassung
+
+Diese Dokumentation bietet einen Überblick über die HilfsArtikelApp_01, einschließlich der verwendeten Technologien, der Projektstruktur, der wichtigsten Klassen und Methoden sowie der Benutzeroberfläche und der Datenbankänderungen. Das Ziel dieser Anwendung ist es, eine benutzerfreundliche Bestell-App für pflegebedürftige Personen und Pflegedienstanbieter zu erstellen.
